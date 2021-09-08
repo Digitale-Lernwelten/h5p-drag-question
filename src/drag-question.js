@@ -908,7 +908,7 @@ C.prototype.calculateMaxScore = function () {
     }
   }
 
-  return max;
+  return Math.min(max,this.dropZones.length);
 };
 
 /**
