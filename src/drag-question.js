@@ -825,14 +825,7 @@ C.prototype.showAllSolutions = function (skipVisuals) {
     this.hideButton('check-answer');
   }
 
-  if (this.options.behaviour.enableRetry && !skipVisuals) {
-    this.showButton('try-again');
-  }
-
-  if (this.hasButton('check-answer') && (this.options.behaviour.enableRetry === false || this.points === this.getMaxScore())) {
-    // Max score reached, or the user cannot try again.
-    this.hideButton('try-again');
-  }
+  this.showButton('try-again');
 };
 
 /**
